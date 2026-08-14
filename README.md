@@ -17,7 +17,7 @@ Pure MATLAB · No Simulink · No Simscape · No additional toolbox
 
 ## Overview
 
-This project models a Formula Student / TEKNOFEST-style electric race car as one coupled electro-mechanical-thermal system. Vehicle dynamics, PMSM field-oriented control, inverter losses, a nonlinear 2-RC battery model, cell balancing, and liquid cooling are evaluated through a single fixed-step fourth-order Runge–Kutta solver.
+This project models a FormulaStudent-type electric race car as one coupled electro-mechanical-thermal system. Vehicle dynamics, PMSM field-oriented control, inverter losses, a nonlinear 2-RC battery model, cell balancing, and liquid cooling are evaluated through a single fixed-step fourth-order Runge–Kutta solver.
 
 The default configuration represents an **80 kWh, 400 V-class, 96s10p battery pack**. Its 960 physical cells are modeled as 96 independently monitored parallel groups, allowing the BMS to track group-level SoC, terminal voltage, temperature, and balancing activity.
 
