@@ -303,12 +303,11 @@ Released under the [MIT License](LICENSE).
 
 ## Author
 
-Developed by **Ahmet Yusuf Hitay** — [@YasayanEfsane](https://github.com/YasayanEfsane)
 
 ---
 
 <div align="center">
 
-If you find the project useful, consider giving the repository a ⭐.
+
 
 </div>
