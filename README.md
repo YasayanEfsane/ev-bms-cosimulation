@@ -303,7 +303,7 @@ Released under the [MIT License](LICENSE).
 
 ## Author
 
-
+Ahmet Yusuf Hitay @YasayanEfsane
 ---
 
 <div align="center">
