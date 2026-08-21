@@ -184,6 +184,37 @@ plotSimulationResults(results, cfg);
 
 Generated files are written to the `output/` directory.
 
+## Simulation KPI Summary
+
+Every run produces a compact post-simulation report in the MATLAB Command
+Window. It includes distance, energy drawn, regenerative energy, net
+consumption, speed-tracking error, peak battery currents, voltage limits,
+thermal peaks, balancing performance, and field-weakening duration.
+
+```text
+===== EV SIMULATION KPI SUMMARY =====
+Simulated time                          10.000 s
+Distance travelled                      0.180 km
+Energy drawn                            0.4200 kWh
+Regenerative energy                     0.0600 kWh
+Net energy                              0.3600 kWh
+Net consumption                       2000.0 Wh/km
+Maximum vehicle speed                  55.80 km/h
+Peak discharge current                 428.0 A
+Minimum pack voltage                   382.0 V
+Final cell-voltage spread                8.40 mV
+=====================================
+```
+
+The metrics are also available programmatically:
+
+```matlab
+summary = summarizeSimulationResults(results);
+```
+
+When `cfg.output.saveResults` is enabled, the summary is saved as
+`output/simulation_summary.csv` and embedded in `results.summary`.
+
 ## Project Structure
 
 ```text
@@ -211,6 +242,7 @@ EV_BMS_CoSimulation/
 │   ├── buildEVSystem.m
 │   ├── generateRaceDriveCycle.m
 │   ├── sampleDriveCycle.m
+│   ├── summarizeSimulationResults.m
 │   └── plotSimulationResults.m
 ├── tests/
 │   └── run_smoke_tests.m

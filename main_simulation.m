@@ -14,6 +14,8 @@ end
 
 cfg = defaultEVConfig(simulationPreset);
 results = runEVSimulation(cfg);
+summary = summarizeSimulationResults(results);
+results.summary = summary;
 figures = plotSimulationResults(results, cfg); %#ok<NASGU>
 
 if cfg.output.saveResults
@@ -22,5 +24,7 @@ if cfg.output.saveResults
     end
     save(fullfile(cfg.output.directory, 'ev_bms_results.mat'), ...
         'results', 'cfg', '-v7.3');
+    writetable(struct2table(summary, 'AsArray', true), ...
+        fullfile(cfg.output.directory, 'simulation_summary.csv'));
 end
 
